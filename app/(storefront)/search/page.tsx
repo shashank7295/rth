@@ -1,26 +1,27 @@
 import Link from 'next/link';
 import { CATALOG } from '@/lib/catalog';
 
-type Props = { searchParams: { q?: string } };
+type Props = { searchParams: Promise<{ q?: string }> };
 
-export default function SearchPage({ searchParams }: Props) {
-  const q = (searchParams.q ?? '').trim().toLowerCase();
+export default async function SearchPage({ searchParams }: Props) {
+  const { q } = await searchParams;
+  const qValue = (q ?? '').trim().toLowerCase();
   const results = q
     ? CATALOG.filter((p) =>
         [p.title, p.description, p.category]
           .filter(Boolean)
           .join(' ')
           .toLowerCase()
-          .includes(q)
+          .includes(qValue)
       )
     : [];
 
   return (
     <div className="space-y-6">
       <h1 className="text-3xl font-bold text-yellow-300">Search</h1>
-      <p className="text-yellow-200/80">{q ? `Results for "${q}"` : 'Type in the search bar to find products'}</p>
+      <p className="text-yellow-200/80">{qValue ? `Results for "${qValue}"` : 'Type in the search bar to find products'}</p>
 
-      {q && results.length === 0 && (
+      {qValue && results.length === 0 && (
         <div className="border border-yellow-600/30 rounded-lg p-8 text-center text-yellow-200/80">
           No results found.
         </div>

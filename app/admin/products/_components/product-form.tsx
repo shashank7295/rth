@@ -26,8 +26,8 @@ const productFormSchema = z.object({
   price: z.coerce.number().min(0.01, {
     message: 'Price must be greater than 0.',
   }),
-  category: z.string({
-    required_error: 'Please select a category.',
+  category: z.string().min(1, {
+    message: 'Please select a category.',
   }),
   stock: z.coerce.number().min(0, {
     message: 'Stock cannot be negative.',
@@ -57,8 +57,10 @@ interface ProductFormProps {
 export function ProductForm({ initialData, onSubmit, isLoading }: ProductFormProps) {
   const [images, setImages] = useState<string[]>(initialData?.images || []);
 
-  const form = useForm<ProductFormValues>({
-    resolver: zodResolver(productFormSchema),
+  // Specify TransformedValues generic to align with Zod v4 resolver types
+  const form = useForm<ProductFormValues, any, ProductFormValues>({
+    // Cast resolver to satisfy TypeScript when using Zod v4 + RHF generics
+    resolver: zodResolver(productFormSchema) as any,
     defaultValues: {
       name: initialData?.name || '',
       description: initialData?.description || '',

@@ -1,7 +1,7 @@
 'use client';
 
-import { ColumnDef } from "@tanstack/react-table";
 import { DataTable } from "../../../../components/ui/data-table";
+import type { ColumnDef } from "../../../../components/ui/data-table";
 import { Button } from "../../../../components/ui/button";
 import { Edit, Trash2 } from "lucide-react";
 import Link from "next/link";
@@ -21,9 +21,9 @@ const columns: ColumnDef<Product>[] = [
     header: "Image",
     cell: ({ row }) => (
       <div className="h-10 w-10 rounded-md overflow-hidden">
-        <img 
-          src={row.getValue<string>("image") || "/placeholder-product.png"} 
-          alt={row.getValue<string>("name")}
+        <img
+          src={(row.getValue("image") as string) || "/placeholder-product.png"}
+          alt={(row.getValue("name") as string)}
           className="h-full w-full object-cover"
         />
       </div>
@@ -41,7 +41,7 @@ const columns: ColumnDef<Product>[] = [
     accessorKey: "price",
     header: "Price",
     cell: ({ row }) => {
-      const price = row.getValue<number>("price");
+      const price = Number(row.getValue("price"));
       const formatted = new Intl.NumberFormat("en-US", {
         style: "currency",
         currency: "USD",
@@ -52,11 +52,12 @@ const columns: ColumnDef<Product>[] = [
   {
     accessorKey: "stock",
     header: "Stock",
-    cell: ({ row }) => (
-      <span className={row.getValue<number>("stock") > 0 ? "text-green-600" : "text-red-600"}>
-        {row.getValue<number>("stock")}
-      </span>
-    ),
+    cell: ({ row }) => {
+      const stock = Number(row.getValue("stock"));
+      return (
+        <span className={stock > 0 ? "text-green-600" : "text-red-600"}>{stock}</span>
+      );
+    },
   },
   {
     id: "actions",

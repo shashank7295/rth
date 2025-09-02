@@ -2,14 +2,14 @@
 
 import * as React from "react";
 
-type RowContext<T> = {
+export type RowContext<T> = {
   row: {
     getValue: (key: string) => any;
     original: T;
   };
 };
 
-type ColumnDef<T> = {
+export type ColumnDef<T> = {
   accessorKey?: keyof T | string;
   header?: React.ReactNode;
   cell?: (ctx: RowContext<T>) => React.ReactNode;
