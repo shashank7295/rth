@@ -2,7 +2,10 @@
 module.exports = {
   // IMPORTANT: Set SITE_URL in your environment (e.g., .env) to your production domain
   // Example: SITE_URL=https://www.example.com
-  siteUrl: process.env.SITE_URL || 'https://example.com',
+  siteUrl: 'https://itraya.vercel.app',
+
+  // Provide a stylesheet for human-friendly viewing in browsers
+  xslUrl: '/sitemap.xsl',
 
   // Generate robots.txt alongside sitemaps
   generateRobotsTxt: true,
