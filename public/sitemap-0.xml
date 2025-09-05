@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://example.com/legal/terms</loc><lastmod>2025-09-05T20:07:02.898Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/contact</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/legal/privacy</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/about</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/checkout</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/cart</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/sign-up</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/products/compound</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/products/beauty</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/admin/login</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/products/attar</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/legal/returns</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/products/essential-oil</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/admin</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/products</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/admin/products/new</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/legal/shipping</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/sign-in</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/admin/products</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/products/perfume</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/account/orders</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/account/addresses</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/account/wishlist</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/products/oud</loc><lastmod>2025-09-05T20:07:02.899Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>
