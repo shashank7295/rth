@@ -158,35 +158,36 @@ export function Navbar() {
             <Link href="/cart" className="block text-yellow-300 hover:text-yellow-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Cart</Link>
             <Link href="/" className="block text-yellow-300 hover:text-yellow-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
 
-            <div className="pt-2">
+            <div className="pt-2" ref={dropdownRef}>
               <button
                 type="button"
                 className="w-full flex items-center justify-between text-left text-yellow-300 hover:text-yellow-400 transition-colors"
                 onMouseDown={(e) => e.preventDefault()}
-                onClick={() => setIsProductsDropdownOpen((v) => !v)}
+                onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
+                onTouchStart={(e) => e.stopPropagation()}
               >
                 <span>Products</span>
                 <svg className={`w-4 h-4 transition-transform ${isProductsDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              {isProductsDropdownOpen && (
-                <div className="mt-2 ml-3 border-l border-yellow-600/20">
-                  {productCategories.map((category) => (
-                    <Link
-                      key={category.name}
-                      href={category.href}
-                      className="block pl-3 py-2 text-yellow-300 hover:text-yellow-400 transition-colors"
-                      onClick={() => {
-                        setIsProductsDropdownOpen(false);
-                        setIsMobileMenuOpen(false);
-                      }}
-                    >
-                      {category.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
+              <div 
+                className={`mt-2 ml-3 border-l border-yellow-600/20 transition-all duration-200 overflow-hidden ${isProductsDropdownOpen ? 'max-h-96' : 'max-h-0'}`}
+              >
+                {productCategories.map((category) => (
+                  <Link
+                    key={category.name}
+                    href={category.href}
+                    className="block pl-3 py-2 text-yellow-300 hover:text-yellow-400 transition-colors"
+                    onClick={() => {
+                      setIsProductsDropdownOpen(false);
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    {category.name}
+                  </Link>
+                ))}
+              </div>
             </div>
 
             <Link href="/contact" className="block text-yellow-300 hover:text-yellow-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>

@@ -1,3 +1,4 @@
 {
+    "$schema": "vscode://schemas/settings/user",
     "debug.terminal.clearBeforeReusing": true
 }
